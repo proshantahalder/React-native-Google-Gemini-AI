@@ -39,7 +39,7 @@ const App = () => {
     if (textareaValue) {
       setLoading(true); // Set loading state to true
       try {
-        const response = await axios.post('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=YOUR_API_KEY', {
+        const response = await axios.post('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyCQJoGMfySOEoxEpS49DKO2vjKGSJ3GDxQ', {
           contents: [{ parts: [{ text: textareaValue }] }]
         });
         const apiResult = response.data.candidates[0].content.parts[0].text;
